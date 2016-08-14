@@ -1,0 +1,35 @@
+<head>
+  <title>image_share</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+<div class="container">
+  {{> images}}
+  {{> info}}
+    </div>
+</body>
+
+<template name="images">
+    <div class="row">
+    {{#each images}}
+    <div class="col-xs-12 col-md-3">
+    <div class="thumbnail">
+          <img src="{{img_src}}" alt="{{img_alt}}"/>
+        <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>description of the image</p>
+        </div></div></div> <!-- end col -->
+    {{/each}}
+    </div> <!-- row -->
+</template>
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+</template>
